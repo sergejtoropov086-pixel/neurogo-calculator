@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroGO — Узнать стоимость поездки</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">🚗 <span>NeuroGO</span></div>
+            <nav>
+                <button class="menu-btn">☰</button>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h1>Поездки между городами и в аэропорт — без опозданий</h1>
+            <p>Бронируйте заранее и приезжайте вовремя: комфортный транспорт и опытные водители.</p>
+            <div class="cta-buttons">
+                <button class="btn-primary">Заказать по телефону</button>
+                <button class="btn-secondary">Заказать через WhatsApp</button>
+            </div>
+            <div class="stats">
+                <div class="stat"><strong>3 000+</strong><br>Поездок в месяц</div>
+                <div class="stat"><strong>4.9</strong><br>Рейтинг водителей</div>
+                <div class="stat"><strong>20+</strong><br>Лет на рынке</div>
+            </div>
+        </section>
+
+        <section class="calculator">
+            <h2>Узнать стоимость поездки</h2>
+            <div class="form">
+                <div class="input-group">
+                    <label for="from">📍 Откуда</label>
+                    <input type="text" id="from" placeholder="Например: Москва, Красная площадь" />
+                    <div id="suggestionsFrom" class="suggestions"></div>
+                </div>
+
+                <div class="input-group">
+                    <label for="to">📍 Куда</label>
+                    <input type="text" id="to" placeholder="Например: Шереметьево" />
+                    <div id="suggestionsTo" class="suggestions"></div>
+                </div>
+
+                <div class="input-group">
+                    <label for="date">📅 Дата</label>
+                    <input type="date" id="date" />
+                </div>
+
+                <div class="input-group">
+                    <label for="time">🕒 Время</label>
+                    <input type="time" id="time" />
+                </div>
+
+                <div class="input-group">
+                    <label for="carClass">🚙 Класс авто</label>
+                    <select id="carClass">
+                        <option value="economy">Эконом — 35₽/км</option>
+                        <option value="comfort" selected>Комфорт — 45₽/км</option>
+                        <option value="business">Бизнес — 55₽/км</option>
+                        <option value="minivan">Минивэн — 65₽/км</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="childSeat">👶 Детское кресло</label>
+                    <input type="checkbox" id="childSeat" />
+                </div>
+
+                <div class="promo">
+                    <label for="promoCode">🎁 У меня есть промокод</label>
+                    <input type="text" id="promoCode" placeholder="Введите промокод" />
+                </div>
+
+                <button id="calculateBtn" class="calculate-btn">Рассчитать стоимость</button>
+            </div>
+            <div id="result" class="result"></div>
+        </section>
+
+        <section class="how-it-works">
+            <h2>Как это работает</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="icon">📞</div>
+                    <h3>Заявка</h3>
+                    <p>Позвоните нам, напишите в WhatsApp или заполните форму на сайте. Указывайте точные адреса и время.</p>
+                </div>
+                <div class="step">
+                    <div class="icon">🚗</div>
+                    <h3>Звонок диспетчера</h3>
+                    <p>Через ~3 минуты подтвердим заказ и озвучим итоговую стоимость.</p>
+                </div>
+                <div class="step">
+                    <div class="icon">📱</div>
+                    <h3>Звонок водителя + SMS</h3>
+                    <p>Через 10–15 минут позвонит водитель для уточнения деталей. Ещё через ~5 минут придёт SMS с данными автомобиля.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">🚗 NeuroGO</div>
+                <div class="footer-links">
+                    <a href="#">Главная</a>
+                    <a href="#">Почему Мы</a>
+                    <a href="#">Тарифы</a>
+                    <a href="#">Трансферы</a>
+                    <a href="#">Как это работает</a>
+                    <a href="#">Отзывы</a>
+                    <a href="#">Контакты</a>
+                </div>
+                <div class="footer-contact">
+                    <p>+7 (800) 300-00-00</p>
+                    <p>WhatsApp</p>
+                    <p>info@neuro-go.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2025 NeuroGO. Все права защищены.
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
